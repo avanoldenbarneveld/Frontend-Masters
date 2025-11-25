@@ -1,5 +1,10 @@
 function printRecords(recordIds) {
-	// TODO
+	const records = recordIds.map(function (id) {
+		return studentRecords.find(function (record) {
+			return record.id === id
+		})
+	});
+	// TODO : sort and print
 }
 
 function paidStudentsToEnroll() {
@@ -13,7 +18,7 @@ function remindUnpaid(recordIds) {
 
 // ********************************
 
-var currentEnrollment = [ 410, 105, 664, 375 ];
+var currentEnrollment = [410, 105, 664, 375];
 
 var studentRecords = [
 	{ id: 313, name: "Frank", paid: true, },
